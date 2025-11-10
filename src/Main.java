@@ -1,23 +1,11 @@
-import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-    RandomGeneration randomGeneration = new RandomGeneration();
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        RandomGeneration randomGeneration = new RandomGeneration();
+        UserNumber userNumber = new UserNumber();
 
+        System.out.println(userNumber.getUserNumber());
 
         System.out.println(randomGeneration.getRandom());
     }
 }
-
-
-
-
-
-
-
-
-/*
-    получаем рандомное значение
-    System.out.println(randomGeneration.getRandom());
- */

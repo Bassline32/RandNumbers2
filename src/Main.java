@@ -1,11 +1,20 @@
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        RandomGeneration randomGeneration = new RandomGeneration();
-        UserNumber userNumber = new UserNumber();
 
-        System.out.println(userNumber.getUserNumber());
+        NumbersComparison numbersComparison = new NumbersComparison();
 
-        System.out.println(randomGeneration.getRandom());
+        System.out.println(numbersComparison.getNumberComparison());
     }
 }
+
+
+
+/*System.out.println(userNumber.getUserNumber());
+
+        System.out.println(randomGeneration.getRandom());
+
+//  RandomGeneration randomGeneration = new RandomGeneration();
+//  UserNumber userNumber = new UserNumber();
+
+ */

@@ -1,16 +1,20 @@
 
 public class NumbersComparison {
-    public int getNumberComparison() throws Exception {
-        RandomGeneration randomGeneration = new RandomGeneration();
-        UserNumber userNumber = new UserNumber();
+    public void compare(UserNumber userNumber, RandomGeneration randomGeneration) throws Exception {
+        try {
+            int userInput = userNumber.getUserNumber();
+            int generatedNumber = randomGeneration.getRandom();
 
-        if (randomGeneration.getRandom() == userNumber.getUserNumber()) {
-            System.out.println("Вы выиграли мистер");
-    }
-        else {
-            System.out.println("Вы проиграли Сэр");
-    }
-        return 0;
+            if (userInput == generatedNumber) {
+                System.out.println("Вы победили");
+            } else {
+                System.out.println("Вы проиграли");
+            }
+            System.out.print(" Ваше число = " + userInput);
+            System.out.println(" Сгенерированное число = " + generatedNumber);
+        } catch (Exception e) {
+            throw new Exception(e);
+        }
     }
 }
 

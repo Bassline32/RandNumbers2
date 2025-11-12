@@ -4,7 +4,6 @@ public class RandomGeneration {
     public int getRandom() {
         System.out.println("Число сгенерированное");
         Random random = new Random();
-        int number = random.nextInt(10);
-        return number;
+        return random.nextInt(10) + 1;
     }
 }

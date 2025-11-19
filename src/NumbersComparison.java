@@ -4,22 +4,21 @@ public class NumbersComparison {
 
         int attemptCounter = 0;
 
-        while (true){
+        while (true) {
             attemptCounter++;
             try {
                 int userInput = userNumber.getUserNumber();
-                int generatedNumber = randomGeneration.getRandom();
+                int randomNumber = randomGeneration.getRandom();
 
-                if (userInput == generatedNumber) {
+                if (userInput == randomNumber) {
                     System.out.println("Вы победили. Число попыток: " + attemptCounter);
-                    System.out.println(" Сгенерированное число = " + generatedNumber);
+                    System.out.println(" Сгенерированное число = " + randomNumber);
                     break;
                 } else {
                     System.out.println("Вы проиграли");
-
                 }
                 System.out.print(" Ваше число = " + userInput);
-                System.out.println(" Сгенерированное число = " + generatedNumber);
+                System.out.println(" Сгенерированное число ***** " + randomNumber);
             } catch (Exception e) {
                 throw new Exception(e);
             }

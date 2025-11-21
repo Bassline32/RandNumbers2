@@ -2,8 +2,9 @@
 public class Main {
     public static void main(String[] args) throws Exception {
         RandomGeneration randomGeneration = new RandomGeneration();
-randomGeneration.getRandom();
-
+       // randomGeneration.getRandom();
+SelectDifficult selectDifficult = new SelectDifficult();
+selectDifficult.choiceDifficult();
     }
 }
 

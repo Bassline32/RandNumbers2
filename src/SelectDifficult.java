@@ -12,9 +12,9 @@ public class SelectDifficult {
         while (!keepchoice) {
             try {
                 System.out.println("Выберите уровень сложности ");
-                System.out.println("легко: в переделах от 1 до 5 или ");
-                System.out.println("средне: в переделах от 1 до 20 или ");
-                System.out.println("сложно: в переделах от 1 до 100");
+                System.out.println("1 : в переделах от 1 до 5 или ");
+                System.out.println("2 : в переделах от 1 до 20 или ");
+                System.out.println("3 : в переделах от 1 до 100");
                 System.out.println("1(легко) 2(средне) 3(сложно)");
 
                 int choice = scanner.nextInt();

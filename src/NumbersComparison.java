@@ -1,8 +1,13 @@
+import java.util.Scanner;
 
 public class NumbersComparison {
     public void compare(UserNumber userNumber, RandomGeneration randomGeneration) throws Exception {
 
+        AttemptionTime attemptionTime = new AttemptionTime();
+
         int attemptCounter = 0;
+
+        attemptionTime.StartTime();
 
         while (true) {
             attemptCounter++;
@@ -11,7 +16,8 @@ public class NumbersComparison {
                 int randomNumber = randomGeneration.getRandom();
 
                 if (userInput == randomNumber) {
-                    System.out.println("Вы победили. Число попыток: " + attemptCounter);
+                    attemptionTime.EndTime();
+                    System.out.println("Вы победили. Число попыток: " + attemptCounter + " Ваше время попытки в секндах " + attemptionTime.getTime());
                     System.out.println(" Сгенерированное число = " + randomNumber);
                     break;
                 } else {

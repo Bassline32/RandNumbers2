@@ -5,10 +5,11 @@ public class UserNumber {
     private final RandomGeneration randomGeneration;
     //final = после инициализации переменной её значение не может быть изменено.
 
-//метод для генерации рандомных значений
+    //метод для генерации рандомных значений
     public UserNumber(RandomGeneration randomGeneration) {
         this.randomGeneration = randomGeneration;
     }
+
     //получаем число от пользователя
     public int getUserNumber() throws Exception {
         Scanner scanner = new Scanner(System.in);

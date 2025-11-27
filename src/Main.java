@@ -7,6 +7,9 @@ public class Main {
 
         UserNumber userNumber = new UserNumber(selectDifficult.randomGeneration);
         userNumber.getUserNumber();
+
+        NumbersComparison numbersComparison = new NumbersComparison();
+        numbersComparison.compare(userNumber, selectDifficult.randomGeneration);
     }
 }
 

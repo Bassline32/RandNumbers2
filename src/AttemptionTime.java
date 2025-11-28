@@ -4,11 +4,11 @@ public class AttemptionTime {
     private long startTime;
     private long endTime;
 
-    public void StartTime() {
+    public void startTime() {
         startTime = System.currentTimeMillis();
     }
 
-    public void EndTime() {
+    public void endTime() {
         endTime = System.currentTimeMillis();
     }
 

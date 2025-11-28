@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class NumbersComparison {
     public void compare(UserNumber userNumber, RandomGeneration randomGeneration) throws Exception {
 
@@ -7,18 +5,19 @@ public class NumbersComparison {
 
         int attemptCounter = 0;
 
-        attemptionTime.StartTime();
+        attemptionTime.startTime();
 
         while (true) {
             attemptCounter++;
             try {
-                int userInput = userNumber.getUserNumber();
-                int randomNumber = randomGeneration.getRandom();
+                int userInput = userNumber.getUserNumber(randomGeneration.getMinBoarder(), randomGeneration.getMaxBoarder());
+                int randomNumber = randomGeneration.getRandom(); //число хранится в рамках одной сессии
 
                 if (userInput == randomNumber) {
-                    attemptionTime.EndTime();
+                    attemptionTime.endTime();
                     System.out.println("Вы победили. Число попыток: " + attemptCounter + " Ваше время попытки в секндах " + attemptionTime.getTime());
                     System.out.println(" Сгенерированное число = " + randomNumber);
+                    randomGeneration.reGeneratedRandom(); //перезаписали число после победы
                     break;
                 } else {
                     System.out.println("Вы проиграли");

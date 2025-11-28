@@ -3,7 +3,8 @@ import java.util.Random;
 public class RandomGeneration {
     private int minBoarder;
     private int maxBoarder;
-    Random random = new Random();
+    private int currentRandomNumber;
+    private final Random random = new Random();
 
     //геттеры и сеттеры параметрами диапазона
     public void setMinBoarder(int minBoarder) {
@@ -23,9 +24,18 @@ public class RandomGeneration {
     }
 
     //генерируем случайное число в рамках заданного диапазона
-    public int getRandom() {
-        return random.nextInt((maxBoarder - minBoarder) + 1) + minBoarder;
+    public void generatedRandom() {
+        currentRandomNumber = random.nextInt(minBoarder, maxBoarder);
     }
 
+    //сохраняем сгенерированное случайное число
+    public int getRandom() {
+        return currentRandomNumber;
+    }
+
+    //перезаписываем случайное число
+    public void reGeneratedRandom() {
+        generatedRandom();
+    }
 
 }

@@ -2,10 +2,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SelectDifficult {
-    RandomGeneration randomGeneration = new RandomGeneration();
 
-    public void choiceDifficult() throws Exception {
+    public RandomGeneration choiceDifficult() throws Exception {
+
         Scanner scanner = new Scanner(System.in);
+        RandomGeneration randomGeneration = new RandomGeneration();
 
         boolean keepchoice = false;
 
@@ -23,18 +24,21 @@ public class SelectDifficult {
                     case 1:
                         randomGeneration.setMinBoarder(1);
                         randomGeneration.setMaxBoarder(5);
+                        randomGeneration.generatedRandom();
                         keepchoice = true;
                         break;
 
                     case 2:
                         randomGeneration.setMinBoarder(1);
                         randomGeneration.setMaxBoarder(20);
+                        randomGeneration.generatedRandom();
                         keepchoice = true;
                         break;
 
                     case 3:
                         randomGeneration.setMinBoarder(1);
                         randomGeneration.setMaxBoarder(100);
+                        randomGeneration.generatedRandom();
                         keepchoice = true;
                         break;
                     default:
@@ -46,5 +50,6 @@ public class SelectDifficult {
                 scanner.next();
             }
         }
+        return randomGeneration;
     }
 }

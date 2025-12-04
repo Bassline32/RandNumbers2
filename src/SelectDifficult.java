@@ -2,11 +2,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SelectDifficult {
+    RandomGeneration randomGeneration = new RandomGeneration();
 
     public RandomGeneration choiceDifficult() throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        RandomGeneration randomGeneration = new RandomGeneration();
 
         boolean keepchoice = false;
 
